@@ -42,7 +42,8 @@ namespace MvcMusicStore_F2017.Controllers
             // add the selected genre to the viewbag so we can display it in the browse view
             var g = db.Genres.Include("Albums")
                 .SingleOrDefault(gn => gn.Name == genre);
-
+                
+            // ViewBag.genre = genre;
             return View(g); // リターン値はg!!!
         }
 
